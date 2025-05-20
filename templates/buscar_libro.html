@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Buscar Libro{% endblock %}
+{% block content %}
+  <h2>Buscar Libro</h2>
+  <form method="get">
+    <input name="q" value="{{ query }}" placeholder="Título...">
+    <button>Buscar</button>
+  </form>
+  <ul>
+    {% for libro in resultados %}
+      <li>{{ libro.titulo }} — {{ libro.autor }}</li>
+    {% empty %}
+      <li>No se encontraron resultados.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

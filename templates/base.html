@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>{% block title %}Mi Web{% endblock %}</title></head>
+<body>
+  <nav>
+    <a href="{% url 'lista_libros' %}">Inicio</a> |
+    <a href="{% url 'crear_autor' %}">Autor</a> |
+    <a href="{% url 'crear_categoria' %}">Categoría</a> |
+    <a href="{% url 'crear_libro' %}">Libro</a> |
+    <a href="{% url 'buscar_libro' %}">Buscar</a>
+  </nav>
+  {% block content %}{% endblock %}
+</body>
+</html>
